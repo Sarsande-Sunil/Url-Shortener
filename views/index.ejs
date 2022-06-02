@@ -31,11 +31,26 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td><a href="www.masaischool.com">www.masaischool.com</a></td>
-                <td><a href="/12345">12345</a></td>
-                <td>10</td>
-            </tr>
+            <% shortUrls.forEach(shortUrl=>{ %>
+
+                 <tr>
+                <td>
+                <a href="<%= shortUrl.full%> ">
+                    <%= shortUrl.full%>
+                </a>
+                </td>
+                <td>
+                    <a href="<%= shortUrl.short%>">
+                        <%= shortUrl.short%>
+                    </a>
+                </td>
+                <td>
+                    <%= shortUrl.clicks%>
+                </td>
+                </tr>
+
+            <% }) %> 
+           
         </tbody>
     </table>
 </div>
